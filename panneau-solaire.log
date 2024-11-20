@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.13)  20 NOV 2024 15:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.13)  20 NOV 2024 16:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -261,13 +261,13 @@ L3 programming layer <2024-11-02>
 Here is how much of TeX's memory you used:
  2443 strings out of 475322
  39897 string characters out of 5770116
- 439731 words of memory out of 5000000
+ 438731 words of memory out of 5000000
  25296 multiletter control sequences out of 15000+600000
  563005 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 57i,11n,65p,441b,255s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,11n,65p,711b,255s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/sami/.TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></home/sami/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/sami/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/sami/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/sami/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/sami/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on panneau-solaire.pdf (8 pages, 79453 bytes).
+Output written on panneau-solaire.pdf (8 pages, 80477 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
