@@ -1,0 +1,78 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=latex 2024.11.13)  20 NOV 2024 12:19
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**fancyhdr/fancyhdr.ins
+(./fancyhdr/fancyhdr.ins
+LaTeX2e <2024-11-01>
+L3 programming layer <2024-11-02>
+(/home/sami/.TinyTeX/texmf-dist/tex/latex/base/docstrip.tex
+\blockLevel=\count196
+\emptyLines=\count197
+\processedLines=\count198
+\commentsRemoved=\count199
+\commentsPassed=\count266
+\codeLinesPassed=\count267
+\TotalprocessedLines=\count268
+\TotalcommentsRemoved=\count269
+\TotalcommentsPassed=\count270
+\TotalcodeLinesPassed=\count271
+\NumberOfFiles=\count272
+\inFile=\read2
+\inputcheck=\read3
+\off@0=\count273
+\off@1=\count274
+\off@2=\count275
+\off@3=\count276
+\off@4=\count277
+\off@5=\count278
+\off@6=\count279
+\off@7=\count280
+\off@8=\count281
+\off@9=\count282
+\off@10=\count283
+\off@11=\count284
+\off@12=\count285
+\off@13=\count286
+\off@14=\count287
+\off@15=\count288
+\@maxfiles=\count289
+\@maxoutfiles=\count290
+
+Utility: `docstrip' v2.6b <2022-09-03>
+English documentation    <2024-02-08>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+)
+
+Generating file(s) ./fancyhdr.sty 
+! Cannot find file fancyhdr.dtx.
+\readsource ...ot find file \uptospace #1 \qStop }
+                                                  \else \processedLines \z@ ...
+l.37 ...cyhdr.sty}{\from{\jobname.dtx}{fancyhdr}}}
+                                                  
+? .
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? x
+ 
+Here is how much of TeX's memory you used:
+ 319 strings out of 475323
+ 3535 string characters out of 5770142
+ 386925 words of memory out of 5000000
+ 23266 multiletter control sequences out of 15000+600000
+ 558069 words of font info for 36 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 12i,0n,15p,126b,43s stack positions out of 10000i,1000n,20000p,200000b,200000s
+No pages of output.
