@@ -16,10 +16,10 @@
 
 \pagestyle{fancy}
 \fancyhf{} 
-\lhead{\textit{Bases de donnees}} 
+\lhead{\textit{Ingénierie des systèmes photovoltaïques}} 
 \rhead{\thepage}  
 
-\title{Ingénierie des panneaux solaires}
+\title{Ingénierie des systèmes photovoltaïques}
 \author{}
 \date{\vspace{-5ex}}
 \geometry{margin=1in}
@@ -50,20 +50,20 @@
 
 \newpage
 
-\section{Système cible et angle d'analyse}
-L'énergie solaire est une source d'énergie renouvelable de plus en plus utilisée à l'échelle mondiale. Les systèmes photovoltaïques (PV), composés principalement de panneaux solaires, jouent un rôle crucial dans la transition énergétique. En particulier, les systèmes photovoltaïques intelligents permettent de maximiser l'efficacité de la production et de la gestion de l'énergie solaire, en intégrant des technologies avancées pour une gestion dynamique et optimisée.
-Ce sont ces systemes photovoltaïques qui seront le systeme d'interet dans le present document d'analyse et conception. Les systèmes photovoltaïques, utilisés sous diverses formes telles que les centrales solaires, les chauffe-eaux, les lampadaires ou les panneaux solaires, trouvent des applications dans des contextes variés, allant des habitations aux entreprises, en passant par les usines, les écoles et les hôpitaux. Dans cette analyse systemique, nous nous intéressons plus particulièrement aux panneaux solaires photovoltaïques, qui sont des dispositifs permettant de convertir l'énergie solaire en électricité.
+\section{Angles d'analyse du système cible}
+\subsection{Contexte}
+La transition énergétique mondiale, marquée par une demande croissante d'énergies renouvelables, soulève des défis majeurs concernant la réduction de la dépendance aux énergies fossiles. Parmi les solutions les plus prometteuses, les systèmes photovoltaïques (PV), qui convertissent l'énergie solaire en électricité, jouent un rôle essentiel dans cette transformation énergétique. Cependant, bien que les technologies photovoltaïques aient fait des progrès considérables ces dernières décennies, plusieurs enjeux techniques, économiques et environnementaux demeurent pour permettre leur déploiement à grande échelle de manière efficace et durable.
+
+Les systèmes photovoltaïques, comprenant principalement des panneaux solaires, sont désormais utilisés dans une large gamme d'applications, allant des installations domestiques aux grandes centrales solaires industrielles. Ces systèmes trouvent leur place dans des secteurs aussi variés que l'habitat, l'industrie, les transports, ou encore les infrastructures publiques, tels que les écoles et les hôpitaux. Ils se déclinent sous diverses formes : centrales solaires, chauffe-eaux solaires, lampadaires photovoltaïques, et bien sûr, les panneaux solaires installés sur des toitures ou des terrains.
+
+La société X spécialisée dans la gestion de data center hébergeant des ordinateurs / serveurs dédiés pour d'autres clients, souhaite installer des systèmes photovoltaïques afin de réduire son empreinte et taxe carbones. Dans ce contexte, l’ingénierie des systèmes photovoltaïques est cruciale pour répondre aux défis de conception, de performance, de coût, et d’intégration dans les réseaux électriques. L’optimisation de ces systèmes nécessite une compréhension approfondie des paramètres techniques et des contraintes environnementales, tout en prenant en compte les aspects économiques et la viabilité à long terme des installations. Cette analyse s'intéresse particulièrement aux panneaux photovoltaïques, leur conception, leur efficacité et leur déploiement dans un réseau de distribution.
 
 
-Nous retrouvons bien la toutes les caractéristiques d'un système complexe : 
-\begin{itemize}
-    \item Un contexte : environnement dans lequel le système s'intègre en l'occurence un reseau électrique. 
-    \item Des proprietes emergentes inatendues et/ou indesirables, venant d'un probleme local qui a des consequences globales.
+\subsection{Système d'intérêt}
+Ce système des panneaux photovoltaïques est principalement conçu pour fonctionner dans un environnement industriel, avec une application particulière dans la production d'électricité à partir de l'énergie solaire. Le périmètre du système est clairement défini : il inclut tous les composants physiques nécessaires pour capturer l'énergie solaire et la convertir en électricité. Cela comprend les cellules photovoltaïques, les modules solaires, ainsi que les connexions électriques internes qui permettent la distribution de l'énergie produite. Les panneaux photovoltaïques, bien qu'ils fonctionnent de manière autonome, ne sont pas isolés. Ils doivent être intégrés dans un réseau de distribution d'électricité, ce qui implique des interactions avec d'autres systèmes externes. L'ingénierie de ce système doit donc non seulement modéliser ses constituants, les liaisons entre ses
+constituants, mais aussi les relations avec les éléments du milieu extérieur qui définit ses limites. Pour ce faire, après modélisation du périmètre systèmique, l'architecture "trois angles / visions" sera utilisée, comprenant dans un premier temps l'analyse opérationnelle, suivie de l'analyse fonctionnelle, et enfin, de l'analyse organique. Cette démarche d'étude conduit logiqument a un ordonnancement des diagrammes suivants : Diagramme de contexte, diagramme d'états, diagramme de scénario opérationnel, diagramme de scénario fonctionnel, diagramme de scénario organique.
 
-\end{itemize} 
 
-L'analyse systeme est basee sur une modelisation qui ne 
-La démarche d'étude conduit logiqument a un ordonnancement des différents diagrammes.
 
 
 
@@ -73,15 +73,41 @@ La démarche d'étude conduit logiqument a un ordonnancement des différents dia
 \section{Identification du périmètre systèmique}
 
 
-\subsection{Environement et systèmes externes}
-\subsection{Parties prenantes}
+\subsection{Milieu extérieur et parties prenantes}
+Le système s'inscrit dans un réseau industriel HTA. En l'occurrence, les panneaux sont utilisés dans des installations de type data center ou bâtiments commerciaux, où l'efficacité énergétique et la réduction des coûts liés à la consommation d'électricité sont des enjeux majeurs. L’optimisation de leur production d’énergie dépend de facteurs externes comme la disponibilité du soleil, la température et l'orientation des panneaux, mais aussi des interactions avec le réseau électrique. L’efficacité du système se trouve ainsi conditionnée par des éléments extérieurs difficilement maîtrisables. 
+Afin d'identifier les systèmes et acteurs externes qui interagissent avec le système cible, il est pertinent d'utiliser la méthode des 6W en se posant les questions suivantes :
+\begin{itemize}
+    \item \textbf{Who ?} : Qui sont les acteurs impliqués dans le système ?
+    Les acteurs principaux sont les fabricants, les installateurs ou techniciens, les gestionnaires de data center, les fournisseurs d'électricité, les autorités réglementaires, les utilisateurs finaux, et organismes de certification.
+    \item \textbf{What ?} : Quels sont les éléments matériels et immatériels du système ?
+    \item \textbf{Where ?} : Où se situe le système et ses composants ?
+    \item \textbf{When ?} : Quand le système est-il actif ou inactif ?
+    \item \textbf{Why ?} : Pourquoi le système est-il nécessaire ?
+    \item \textbf{How ?} : Comment le système interagit-il avec son environnement ?
+\end {itemize}
+
+
+
+Chacune de ces parties prenantes a des intérêts et des contraintes spécifiques qui doivent être pris en compte dans la conception et l'exploitation des systèmes photovoltaïques.
+
+
+
+Il est à noter que de nouvelles parties prenantes peuvent intervenir au cours du cycle de vie du système selon les évolutions technologiques, réglementaires ou économiques. 
 \subsection{Diagramme de contexte} 
+
+Le diagramme de contexte permet de visualiser les interactions entre le système et son environnement, en identifiant les éléments extérieurs qui influent sur le système ou qui sont influencés par lui. Il permet de délimiter le périmètre du système et de définir les interfaces avec les éléments extérieurs. Ici, il a été organisé de manière à positionner respectivement les parties prenantes et systèmes externes, dans les quatre quadrants du diagramme :
+\begin{itemize}
+    \item \textbf{À gauche} : les systèmes d'entrée de S ;
+    \item \textbf{À droite} : les systèmes de sortie de S ;
+    \item \textbf{En haut} : les systèmes contraignants principaux par rapport à S ;
+    \item \textbf{En bas} : les systèmes de ressources par rapport à S.
+\end{itemize}
+Le système doit transformer les entrées I(S) en sorties O(S), en tenant compte des contraintes C(S) et avec les ressources R(S) disponibles.  
 
 
 
 \section{Analyse et modélisation opérationnelle}
 \subsection{Expression des besoins}
-\subsection{Diagramme de cycle de vie}
 
 \subsection{Diagramme de scénario opérationnel}
 
@@ -94,13 +120,14 @@ La démarche d'étude conduit logiqument a un ordonnancement des différents dia
 
 \clearpage
 
+\subsection{Diagramme d'états}
+
 
 \subsection{Diagramme de scénario fonctionnel}
 
 \clearpage
 
 
-\subsection{}
 
 \clearpage
 
@@ -109,7 +136,7 @@ La démarche d'étude conduit logiqument a un ordonnancement des différents dia
 
 
 
-\subsection{Exigences techniques}
+\subsection{Exigences organiques}
 
 \clearpage
 
@@ -119,7 +146,6 @@ La démarche d'étude conduit logiqument a un ordonnancement des différents dia
 \clearpage
 
 
-\subsection{}
 
 \clearpage
 
