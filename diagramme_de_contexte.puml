@@ -1,0 +1,38 @@
+
+@startuml
+skinparam backgroundColor #4C5167
+
+skinparam component {
+  FontSize 13
+  BackgroundColor<<Apache>> #E6D8AF
+  BorderColor<<Apache>> #E6D97B
+  FontName Inter
+  BorderColor #9FA3BA
+  BackgroundColor #B2B6CF
+  ArrowFontName Impact
+
+  ArrowColor #E3B3BE
+  ArrowFontColor #777777
+}
+[A] as "<color:>Panneau Photovoltaïque</color>" #E6D8AF
+
+
+[Énergie solaire] -right-> [A]
+[Fournisseurs d'électricité] -left-> [A]
+[Data Centers] -left-> [A]
+
+[Météo] -down-> [A]
+[Réglementation] -down-> [A]
+[Réseau électrique] -down-> [A]
+[Fabricants] -up-> [A]
+[Techniciens] -up-> [A]
+[Project Managers] -up-> [A]
+[Onduleurs] -up-> [A]
+[Monture] -up-> [A]
+[Dispositifs de protection] -up-> [A]
+[Batteries] -up-> [A]
+[Compteurs] -up-> [A]
+[Transformateurs] -up-> [A]
+[Isolateurs] -up-> [A]
+
+@enduml
