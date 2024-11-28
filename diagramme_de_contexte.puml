@@ -1,20 +1,21 @@
-
 @startuml
-skinparam backgroundColor #4C5167
+skinparam backgroundColor white
 
 skinparam component {
   FontSize 13
-  BackgroundColor<<Apache>> #E6D8AF
-  BorderColor<<Apache>> #E6D97B
+  BackgroundColor<<Apache>> #F0EEFF
+  BorderColor<<Apache>> #FFC57A
   FontName Inter
-  BorderColor #9FA3BA
-  BackgroundColor #B2B6CF
+FontColor #7664E1
+  BorderColor #7359CC
+
+  BackgroundColor #F0EEFF
   ArrowFontName Impact
 
-  ArrowColor #E3B3BE
+  ArrowColor #C363A0
   ArrowFontColor #777777
 }
-[A] as "<color:>Panneau Photovoltaïque</color>" #E6D8AF
+[A] as "<color:white>Panneau Photovoltaïque</color>" #E54871
 
 
 [Énergie solaire] -right-> [A]
