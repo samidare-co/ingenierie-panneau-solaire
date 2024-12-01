@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.24)  1 DEC 2024 01:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.24)  2 DEC 2024 00:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -252,37 +252,43 @@ File: diagramme_de_scenario_operationnel.png Graphic file (type png)
 <use diagramme_de_scenario_operationnel.png>
 Package pdftex.def Info: diagramme_de_scenario_operationnel.png  used on input line 140.
 (pdftex.def)             Requested size: 446.26582pt x 130.5442pt.
- [4 <./diagramme_de_contexte.png (PNG copy)>] [5 <./diagramme_de_scenario_operationnel.png (PNG copy)>] [6
+ [4 <./diagramme_de_contexte.png (PNG copy)>] [5 <./diagramme_de_scenario_operationnel.png (PNG copy)>]
+<diagramme_etat.png, id=26, 350.30875pt x 663.47874pt>
+File: diagramme_etat.png Graphic file (type png)
+<use diagramme_etat.png>
+Package pdftex.def Info: diagramme_etat.png  used on input line 175.
+(pdftex.def)             Requested size: 235.62503pt x 446.26582pt.
+<diagramme_de_scenario_fonctionnel.png, id=27, 1448.41125pt x 393.47pt>
+File: diagramme_de_scenario_fonctionnel.png Graphic file (type png)
+<use diagramme_de_scenario_fonctionnel.png>
+Package pdftex.def Info: diagramme_de_scenario_fonctionnel.png  used on input line 185.
+(pdftex.def)             Requested size: 446.26582pt x 121.22995pt.
+ [6
 
-]
-<diagramme_de_scenario_organique.png, id=29, 1580.90625pt x 406.51875pt>
+ <./diagramme_etat.png (PNG copy)>] [7 <./diagramme_de_scenario_fonctionnel.png (PNG copy)>]
+<diagramme_de_scenario_organique.png, id=36, 1580.90625pt x 406.51875pt>
 File: diagramme_de_scenario_organique.png Graphic file (type png)
 <use diagramme_de_scenario_organique.png>
-Package pdftex.def Info: diagramme_de_scenario_organique.png  used on input line 219.
+Package pdftex.def Info: diagramme_de_scenario_organique.png  used on input line 245.
 (pdftex.def)             Requested size: 446.26582pt x 114.75491pt.
- [7
-
-
-] [8 <./diagramme_de_scenario_organique.png (PNG copy)>] [9
-
-] (./panneau-solaire.aux)
+ [8 <./diagramme_de_scenario_organique.png (PNG copy)>] (./panneau-solaire.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2802 strings out of 476025
- 46607 string characters out of 5790017
+ 2819 strings out of 476025
+ 47125 string characters out of 5790017
  1864388 words of memory out of 5000000
- 23244 multiletter control sequences out of 15000+600000
+ 23259 multiletter control sequences out of 15000+600000
  517223 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,12n,62p,1001b,367s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on panneau-solaire.pdf (9 pages, 281460 bytes).
+Output written on panneau-solaire.pdf (8 pages, 356915 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

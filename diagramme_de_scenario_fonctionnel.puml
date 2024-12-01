@@ -1,0 +1,46 @@
+@startuml
+
+skinparam component {
+  FontSize 13
+  FontName Inter
+  ArrowColor #C363A0
+  ArrowFontColor #222
+}
+
+skinparam actor {
+  FontSize 13
+  FontName Inter
+  FontColor #C363A0
+  BackgroundColor #F0EEFF/C363A0
+}
+
+skinparam participant {
+  FontSize 13
+  FontName Inter
+  FontColor #5448a2
+  BorderColor #7359CC
+  BackgroundColor #F3F1FF
+  ArrowColor #C363A0
+  ArrowFontColor #222
+}
+
+
+participant "<color:#white>Panneau photovoltaïque / Environnement" as pp  #C363A0/C363A0
+participant "Capter l'énergie solaire()" as cc
+participant "Gérer les données de production()" as dd
+participant "Produire de la puissance électrique()" as ppe
+participant "Distribuer l'énergie électrique()" as dee
+
+pp -> cc : Capter l'énergie solaire
+cc -> ppe : Convertir l'énergie solaire 
+cc ->dd: Mesurer les données de production
+dd -> pp : Envoyer les données de production au système de monitoring
+dd -> pp : Mettre à jour les informations toutes les 5 minutes
+dee -> dd : Transmettre l'énergie électrique
+ppe -> dee : Collecter l'énergie électrique
+dee -> pp : Diriger l'énergie vers le cablage
+dd -> pp : Vérification de la performance (Si < 80% : Alarme)
+pp -> pp : Résister à des conditions environnementales (vent, neige, etc.)
+
+
+@enduml

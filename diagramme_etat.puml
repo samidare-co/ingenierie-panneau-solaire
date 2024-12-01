@@ -1,0 +1,43 @@
+@startuml
+scale 350 width
+
+
+
+
+skinparam state {
+  FontSize 13
+  ArrowColor #C363A0
+  FontName Inter
+  BorderColor #7359CC
+  FontColor #5448a2
+  BackgroundColor #F3F1FF/#F3F1FF
+}
+
+
+[*] --> Conception 
+state Conception {
+  [*] --> Installation : Achat
+  Installation --> Actif : Mise en marche
+  Actif --> Installation : Maintenance / ajout de pièce
+}
+
+state Actif {
+  [*] --> Monitoring : Déclencher des mesures manuellement
+  Producteur --> Monitoring : Produire l'énergie électrique
+  Récepteur --> Producteur : Capter l'énergie solaire
+
+
+  state Monitoring {
+          Mesure -> Transmission
+  }
+
+}
+
+Actif --> Obsolescence
+
+state Obsolescence {
+  [*] --> [*] : Destruction
+ [*] --> Recyclage 
+
+}
+@enduml

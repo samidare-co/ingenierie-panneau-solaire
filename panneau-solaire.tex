@@ -149,20 +149,46 @@ Ci-dessous, le diagramme de scénario opérationnel permet de visualiser les int
 
 
 \subsection{Exigences fonctionnelles}
-Les exigences fonctionnelles sont les propriétés et les comportements attendus du système. Elles sont exprimées dans le langage fonctionnel du système sous la forme : "Le système cible doit faire quelque chose avec une certaine performance (en terme de fonctionnalités) durant un fonctionnement donné". Les exigences fonctionnelles du système des panneaux photovoltaïques sont les suivantes :
+Les exigences fonctionnelles sont les propriétés et les comportements attendus du système. Elles sont exprimées dans le langage fonctionnel du système sous la forme : "Le système cible doit faire quelque chose avec une certaine performance (en terme de fonctionnalités) durant un fonctionnement donné". Les exigences fonctionnelles du système des panneaux photovoltaïques sont les suivantes : 
+
+\begin{itemize}
+    \item Le panneau photovoltaïque doit produire une puissance de 300 W crête (Wp)
+    \item Le panneau photovoltaïque doit être capable de fonctionner à une température de -40°C à 85°C
+    \item Le panneau photovoltaïque doit être capable de résister à des vents de 240 km/h
+    \item Le panneau photovoltaïque doit être capable de résister à une charge de neige de 5400 Pa
+    \item Le panneau doit être conçu pour résister à l’humidité et aux intempéries, avec une protection contre les infiltrations d’eau selon le standard IP65.
+    \item Le système de monitoring embarqué doit être capable de suivre la production d'énergie en temps réel avec une précision de 1%
+    \item Le système de monitoring embarqué doit mettre à jour les informations toutes les 5 minutes.
+    \item Le système de monitoring embarqué doit indiquer si la performance tombe sous 80% du rendement initial. 
+    \item Les panneaux doivent garantir une durée de vie d’au moins 25 ans avec une perte de rendement inférieure à 0,5 % par an.
+    \item Les connecteurs MC4 du panneau doivent être capables de supporter une tension de 1000 V et un courant de 30 A.
+    \item Les connecteurs MC4 doivent avoir une capacité de connexion/déconnexion de 1000 cycles.
+\end{itemize}
 
 \clearpage
 
 \subsection{Diagramme d'états}
+Un diagramme d'états est une représentation dynamique du comportement d'un système, montrant les différents états dans lesquels un objet peut se trouver et les transitions entre ces états. Le diagramme ci-dessous représente les états possibles du système des panneaux photovoltaïques, en fonction de son mode de fonctionnement : 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.95\textwidth]{diagramme_etat.png}
+    \caption{Diagramme d'états du système des panneaux photovoltaïques}
+    \label{fig:diagramme_etats}
+\end{figure}
 
 \subsection{Diagramme de scénario fonctionnel}
+Un diagramme de scénario fonctionnel associé au système cible est une représentation dynamique des interactions qui ont lieu entre les fonctions du système, et éventuellement l'environnement, pendant un certain mode de fonctionnement. Le diagramme ci dessous est associé avec le mode de fonctionnement "actif" des panneaux photovoltaïques. 
 
-\clearpage
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{diagramme_de_scenario_fonctionnel.png}
+    \caption{Diagramme de scénario fonctionnel du système des panneaux photovoltaïques}
+    \label{fig:diagramme_scenario_fonctionnel}
+\end{figure}
 
 
 
-\clearpage
 
 
 \section{Analyse et modélisation organique}
@@ -223,13 +249,6 @@ Ce diagramme permet de visualiser les interactions entre les composants du panne
 \end{figure}
 
 
-\clearpage
-
-
-
-
-
-\
 
 
 
