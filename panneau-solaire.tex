@@ -79,7 +79,7 @@ Afin d'identifier les systèmes et acteurs externes qui interagissent avec le sy
 \begin{itemize}
     \item \textbf{Who ?} : Quelles sont les parties prenantes physiques (humaines ou organisationnelles) qui ont une interaction avec le système ?
     Les acteurs principaux sont les fabricants, les installateurs ou techniciens, les ingénieurs systèmes ou project managers, les gestionnaires de data center, les autorités réglementaires, les utilisateurs finaux autrement dit les fournisseurs d'électricité et les data center, et organismes de certification.
-    \item \textbf{What ?} : Quels sont les systèmes externes qui ont une influence sur les missions du système cible?
+    \item \textbf{What ?} : Quels sont les systèmes externes qui ont une influence sur le système cible? L'ensemble des composants du système photovoltaïques incluant les onduleurs, les batteries, les régulateurs de charge, les trackers solaires/montures, les compteurs, les transformateurs, les isolateurs et les dispositifs de protection (fusibles, disjoncteurs, parafoudres, refroidisseurs...).
     \item \textbf{Where ?} : Quelles sont les localisations des systèmes externes qui ont une influence sur le comportement du système ?
     Les lieux où les panneaux photovoltaïques sont installés pour alimenter des systèmes informatiques ou des installations industrielles. Ces centres peuvent être situés dans des zones stratégiques proches de grandes infrastructures électriques.
     \item \textbf{When ?} : Quels sont les systèmes externes qui interagissent tout le temps avec le système ou à certaines périodes seulement ?  L'énergie solaire et les conditions météorologiques (température, humidité et corrosion) influencent la performance des panneaux photovoltaïques en temps réel, avec des variations saisonnières. 
@@ -117,8 +117,31 @@ Le système transforme l'entrée énergie solaire en sortie pour les fournisseur
 
 \section{Analyse et modélisation opérationnelle}
 \subsection{Expression des besoins}
+Les besoins (ou exigences opérationnelles) du système sont définis par les fonctions qu'il doit remplir pour satisfaire les attentes des parties prenantes. Ces besoins ne s'expriment pas dans le langage du système cible lui-même mais dans le langage du milieu exterieur en l'occurence le réseau de distribution et l'environnement. Dans ce projet, les besoins opérationnels du système des panneaux photovoltaïques peuvent être enoncés de la manière suivante : 
+
+\begin{itemize}
+    \item L'énergie solaire doit pouvoir être captée et convertie en électricité  
+    \item Les serveurs des data center doivent être alimentés en électricité de manière fiable et continue y compris la nuit et les jours nuageux
+    \item Les utilisateurs finaux doivent pouvoir disposer de leurs serveurs dédiés en tout temps sans interruption
+    \item Le système global doit être capable de résister aux intempéries et aux conditions environnementales spécifiques
+    \item L'onduleur doit recevoir de l'énergie en courant continu
+    \item L'équilibre du système doit être capable de s'intégrer dans le réseau de distribution existant
+    \item Les ingénieurs systèmes doivent être capable de suivre la production d'énergie des panneaux photovoltaïques 
+    \item Les fournisseurs d'électricité doivent être capable de racheter l'énergie produite par les panneaux photovoltaïques
+    \item Le réseau électrique doit être capable de supporter l'injection d'énergie produite par les panneaux photovoltaïques (Courant alternatif, tension...)
+
+\end{itemize}
 
 \subsection{Diagramme de scénario opérationnel}
+Ci-dessous, le diagramme de scénario opérationnel permet de visualiser les interactions entre les parties prenantes et le système, en identifiant les actions et les échanges d'informations qui se produisent lors de l'utilisation du système. Il permet de décrire de manière synthétique le fonctionnement du système dans son environnement pour l'opération de production d'énergie électrique à partir de l'énergie solaire. 
+\vspace{10pt}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{diagramme_de_scenario_operationnel.png}
+    \caption{Diagramme de scénario opérationnel du système des panneaux photovoltaïques}
+    \label{fig:diagramme_contexte}
+\end{figure}
+\vspace{10pt}
 
 
 \section{Analyse et modélisation fonctionnelle}
@@ -126,6 +149,7 @@ Le système transforme l'entrée énergie solaire en sortie pour les fournisseur
 
 
 \subsection{Exigences fonctionnelles}
+Les exigences fonctionnelles sont les propriétés et les comportements attendus du système. Elles sont exprimées dans le langage fonctionnel du système sous la forme : "Le système cible doit faire quelque chose avec une certaine performance (en terme de fonctionnalités) durant un fonctionnement donné". Les exigences fonctionnelles du système des panneaux photovoltaïques sont les suivantes :
 
 \clearpage
 
@@ -146,22 +170,67 @@ Le système transforme l'entrée énergie solaire en sortie pour les fournisseur
 
 
 \subsection{Exigences organiques}
+Les exigences organiques définissent les caractéristiques techniques et les contraintes de conception du système. Elles sont liées aux composants physiques du système et aux interactions entre ces composants. Les exigences organiques du système des panneaux photovoltaïques sont les suivantes :
+\begin{itemize}
+    \item Les panneaux doivent être constitués de cellules photovoltaïques en silicium monocristallin pour une efficacité maximale.
+    \item Les panneaux doivent être montés sur des structures fixes
+    \item Les panneaux doivent être orientés de manière à maximiser l'exposition au soleil
+    \item Les panneaux doivent être fabriqués avec un cadre en aluminium anodisé, verre trempé et boîtier étanche IP65 pour la résistance aux intempéries.
+    \item Les panneaux doivent être équipés de diodes de dérivation pour minimiser les pertes d'énergie.
+    \item Les panneaux doivent être équipés d'un système de monitoring embarqué pour suivre la production d'énergie en temps réel.
+    \item Les panneaux doivent être équipés de connecteurs MC4 pour faciliter l’installation.
+\end{itemize}
 
-\clearpage
 
 
 \subsection{Diagramme de scénario organique}
+Ce diagramme permet de visualiser les interactions entre les composants du panneau photovoltaïque et éventuellement l'environnement, lors de l'opération du système. Il decrit de manière synthétique et concrète le fonctionnement interne du système pour la production d'énergie électrique à partir de l'énergie solaire qui est comme suit : 
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Environnement $\rightarrow$ Cellules photovoltaïques} :  
+    L'énergie solaire (lumière) est reçue par les cellules photovoltaïques.
+    
+    \item \textbf{Cellules photovoltaïques $\rightarrow$ Cellules photovoltaïques} :  
+    Les cellules photovoltaïques convertissent l'énergie solaire en courant continu (DC).
+    
+    \item \textbf{Cellules photovoltaïques $\rightarrow$ Cadre} :  
+    Les cellules sont montées sur un cadre, qui récupère et maintient l'énergie générée par les cellules.
+    
+    \item \textbf{Cellules photovoltaïques $\rightarrow$ Boîtier IP65} :  
+    Le boîtier protège les cellules contre les intempéries et assure l'étanchéité du système.
+    
+    \item \textbf{Boîtier IP65 $\rightarrow$ Cellules photovoltaïques} :  
+    Le boîtier assure une protection contre les conditions environnementales (eau, poussière, etc.).
+    
+    \item \textbf{Cellules photovoltaïques $\rightarrow$ Cablage} :  
+    Le câblage interne transporte l'énergie produite par les cellules vers les connecteurs.
+    
+    \item \textbf{Cablage $\rightarrow$ Connecteurs MC4} :  
+    Les câbles sont connectés aux connecteurs MC4, qui transmettent le courant continu vers le système de monitoring ou d'autres composants externes.
+    
+    \item \textbf{Connecteurs MC4 $\rightarrow$ Système de monitoring embarqué} :  
+    Le système de monitoring reçoit des informations sur les performances du panneau (tension, courant).
+    
+    \item \textbf{Système de monitoring embarqué $\rightarrow$ Connecteurs MC4} :  
+    Le système de monitoring analyse la performance des connecteurs et surveille leur bon fonctionnement.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{diagramme_de_scenario_organique.png}
+    \caption{Diagramme de scénario organique du système des panneaux photovoltaïques}
+    \label{fig:diagramme_scenario_organique}
+
+\end{figure}
+
 
 \clearpage
 
 
 
-\clearpage
 
 
 \
 
-\section{Annexes}
 
 
 \end{document}

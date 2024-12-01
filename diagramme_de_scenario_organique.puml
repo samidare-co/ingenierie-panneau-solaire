@@ -1,0 +1,65 @@
+@startuml
+
+skinparam component {
+  FontSize 13
+ 
+  FontName Inter
+
+
+
+
+  ArrowColor #C363A0
+  ArrowFontColor #222
+}
+skinparam actor {
+  FontSize 13
+ 
+  FontName Inter
+
+FontColor #C363A0
+
+  BackgroundColor #F0EEFF/C363A0
+
+
+}
+skinparam participant {
+  FontSize 13
+ 
+  FontName Inter
+
+
+FontColor #5448a2
+  BorderColor #7359CC
+
+  BackgroundColor #F3F1FF
+
+
+
+  ArrowColor #C363A0
+  ArrowFontColor #222
+participant "Panneau Solaire" FontColor #fff
+}
+
+
+participant "<color:#white>Environnement" as env  #C363A0/C363A0
+participant "Cellules photovoltaïques" as cp
+participant "Cadre" as cadre
+participant "Boîtier IP65" as boitier
+participant "Système de monitoring embarqué" as sme
+participant "Connecteurs MC4" as cc
+participant "Cablage" as ca
+
+env -> cp : Fournir énergie solaire 
+cp -> cp : Convertir énergie solaire en courant continu (DC)
+cp -> cadre : Récupérer et concentrer l'énergie des cellules
+cp -> boitier : Protections contre intempéries, assurer l'étanchéité
+boitier -> cp : Protéger contre les dommages externes
+cp -> ca : Acheminer l'énergie vers les connecteurs
+ca -> cc : Transmettre l'énergie électrique (courant continu)
+cc -> sme : Envoi des données de performance pour monitoring
+sme -> sme : Analyser les données du panneau solaire
+sme -> cc : Surveillance des performances des connecteurs
+
+
+
+@enduml
