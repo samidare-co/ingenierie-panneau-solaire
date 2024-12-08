@@ -182,8 +182,7 @@ quatre quadrants du diagramme :
 - **En bas** : les principales ressources.
 
 ![Diagramme de contexte du système des panneaux
-photovoltaïques](diagramme_de_contexte.png){#fig:diagramme_contexte
-width="95%"}
+photovoltaïques](diagramme_de_contexte.png)
 
 Le système transforme l'entrée énergie solaire en sortie pour les
 fournisseurs d'électricité et les data center autrement dit en énergie
@@ -242,8 +241,7 @@ l'opération de production d'énergie électrique à partir de l'énergie
 solaire.
 
 ![Diagramme de scénario opérationnel du système des panneaux
-photovoltaïques](diagramme_de_scenario_operationnel.png){#fig:diagramme_contexte
-width="95%"}
+photovoltaïques](diagramme_de_scenario_operationnel.png)
 
 # Analyse et modélisation fonctionnelle
 
@@ -299,7 +297,7 @@ représente les états possibles du système des panneaux photovoltaïques,
 en fonction de son mode de fonctionnement :
 
 ![Diagramme d'états du système des panneaux
-photovoltaïques](diagramme_etat.png){#fig:diagramme_etats height="95%"}
+photovoltaïques](diagramme_etat.png)
 
 ## Diagramme de scénario fonctionnel
 
@@ -310,8 +308,7 @@ certain mode de fonctionnement. Le diagramme ci dessous est associé avec
 le mode de fonctionnement \"actif\" des panneaux photovoltaïques.
 
 ![Diagramme de scénario fonctionnel du système des panneaux
-photovoltaïques](diagramme_de_scenario_fonctionnel.png){#fig:diagramme_scenario_fonctionnel
-width="95%"}
+photovoltaïques](diagramme_de_scenario_fonctionnel.png)
 
 # Analyse et modélisation organique
 
@@ -388,5 +385,4 @@ fonctionnement interne du système pour la production d'énergie
     surveille leur bon fonctionnement.
 
 ![Diagramme de scénario organique du système des panneaux
-photovoltaïques](diagramme_de_scenario_organique.png){#fig:diagramme_scenario_organique
-width="95%"}
+photovoltaïques](diagramme_de_scenario_organique.png)
